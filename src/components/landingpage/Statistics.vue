@@ -46,13 +46,13 @@
   </div>
 </template>
 <script>
-    import LinePrideSimple from './statistics_chart/LineSimple.vue'
-    import SunburstPrideSimple from './statistics_chart/SunburstSimple.vue'
-    import SankeyPrideSimple from './statistics_chart/SankeySimple.vue'
-    import MapPrideSimple from './statistics_chart/MapSimple.vue'
-    import TreePrideSimple from './statistics_chart/TreeSimple.vue'
-    import BarHorizontalPrideSimple from './statistics_chart/BarHorizontalSimple.vue'
-    import store from "@/store/store.js"
+    import LinePrideSimple from '@/components/landingpage/statistics_chart/LineSimple.vue'
+    import SunburstPrideSimple from '@/components/landingpage/statistics_chart/SunburstSimple.vue'  
+    import SankeyPrideSimple from '@/components/landingpage/statistics_chart/SankeySimple.vue'
+    import MapPrideSimple from '@/components/landingpage/statistics_chart/MapSimple.vue'
+    import TreePrideSimple from '@/components/landingpage/statistics_chart/TreeSimple.vue'
+    import BarHorizontalPrideSimple from '@/components/landingpage/statistics_chart/BarHorizontalSimple.vue'
+    import store from "@/store.js"
     export default {
         data () {
             return {
