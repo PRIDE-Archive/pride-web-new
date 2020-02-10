@@ -5,6 +5,7 @@ import store from './store'
 import ViewUI from 'view-design'
 import locale from 'view-design/dist/locale/en-US'
 import 'view-design/dist/styles/iview.css'
+import '@/assets/my-theme/index.less';
 import VueResource  from 'vue-resource'
 import TextHighlight from 'vue-text-highlight'
 //import 'iview/dist/styles/iview.css';
@@ -48,15 +49,6 @@ Vue.component('chart', ECharts)
 
 const bus = new Vue();
 Object.defineProperty(Vue.prototype, '$bus', { get(){return this.$root.bus} });
-/* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   router,
-//   template: '<App/>',
-//   store,
-//   data:{bus},
-//   components: { App }
-// })
 
 new Vue({
   router,
