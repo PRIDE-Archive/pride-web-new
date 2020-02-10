@@ -11,9 +11,6 @@
                   <a title="Back to [service-name] homepage"><img @click="gotoPage(pageObj.pageName)" :src="pageObj.logoURL" alt="logo" :width="pageObj.logoWidth"></a>
                 </div>
               </div>
-              <div class="columns medium-10">
-                <span id="quickgo-header-subtext"><h1 ng-hide="location.path()!=='/'" class="landingpage-title">{{title}}</h1></span>
-              </div>
               <nav class="sub-nav-ebi">
                 <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
                   <li class="sub-nav-list">
