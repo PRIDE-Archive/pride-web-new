@@ -9,7 +9,7 @@
                       <div>Tools</div>
                     </div>
                     <div class="item-content tools">
-                        <div v-for="item in toolsSection" class="content-wrapper">
+                        <div v-for="(item,index) in toolsSection" :key="index" class="content-wrapper">
                             <div class="content-title">
                                 {{item.title}}
                             </div>
@@ -30,7 +30,7 @@
                       <div>Documentation</div>
                     </div>
                     <div class="item-content docs">
-                        <div v-for="item in documentationSection" class="content-wrapper">
+                        <div v-for="(item,index) in documentationSection"  :key="index" class="content-wrapper">
                             <div class="content-title">
                                 {{item.title}}
                             </div>
@@ -86,8 +86,8 @@
   </div>
 </template>
 <script>
-    import Timeline from 'vue-tweet-embed/timeline'
-    import store from "@/store/store.js"
+    import { Tweet, Moment, Timeline } from 'vue-tweet-embed'
+    import store from "@/store.js"
     export default {
         components: {
           Timeline
@@ -114,7 +114,7 @@
                     linefour:'',
                     button:{}
                 },
-                landingPageJsonURL: this.$store.state.baseURL + '/static/landingPage/landing_page.json'
+                landingPageJsonURL: this.$store.state.baseURL + '/landingPage/landing_page.json'
             }
         },
         methods:{
@@ -260,6 +260,12 @@
     }
     .content-button{
         float: right;
+        color:#444;
+        border-bottom-width: 1px;
+        border-bottom-style: dotted;
+    }
+    .content-button:hover{
+        color: #5bc0be;
     }
     .news-button{
         background-color: #1b95e0;
