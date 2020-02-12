@@ -115,7 +115,7 @@
                   },
                 ],
                 countryList:[],
-                countryListURL: this.$store.state.baseURL + '/static/country/index.csv',
+                countryListURL: this.$store.state.baseURL + '/country/index.csv',
             }
         },
         components: {
