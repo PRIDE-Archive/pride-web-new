@@ -22,14 +22,14 @@
     </div>
 </template>
 <script>
-    import NavBar from '@/components/ebi/Nav'
-    import store from "@/store/store.js"
+    import NavBar from '@/components/Nav'
+    import store from "@/store.js"
     export default {
         data () {
             return {
                 source: '',
                 activeName:'',
-                landingPageJsonURL: this.$store.state.baseURL + '/static/landingPage/landing_page.json',
+                landingPageJsonURL: this.$store.state.baseURL + '/landingPage/landing_page.json',
                 tableList:[],
                 /*
                 anchorAttrs: {
@@ -67,7 +67,7 @@
                 this.source = '';
                 this.activeName='';
                 this.tableList=[];
-                this.markdownURL = this.$store.state.baseURL + '/static/markdown/'+subpage+'/content.md';
+                this.markdownURL = this.$store.state.baseURL + '/markdown/'+subpage+'/content.md';
                 this.$http
                   .get(this.markdownURL)
                   .then(function(res){
@@ -191,6 +191,12 @@
     }
     .ivu-menu{
         z-index: 100;
+    }
+    .menu-wrapper .ivu-menu-vertical li.ivu-menu-item-selected{
+        background:none ;
+    }
+    .menu-wrapper .ivu-menu-vertical li:hover{
+        background:#f3f3f3;
     }
     @media (min-width: 768px) {
         .content-container{
