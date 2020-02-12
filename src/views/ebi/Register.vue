@@ -36,7 +36,7 @@
                 </Input>
               </FormItem>
               <FormItem prop="terms" label="Terms of Usage" >
-                  <Checkbox v-model="formInlineSignUp.terms"><a @click="openTerms">Privacy notice</a></Checkbox>
+                  <Checkbox v-model="formInlineSignUp.terms"><a class="privacy-action" @click="openTerms">Privacy notice</a></Checkbox>
               </FormItem>
               <FormItem>
                 <Button class="signupButton" type="primary" @click="signup('formInlineSignUp')" long>Sign Up</Button>
@@ -46,8 +46,8 @@
     </div>
 </template>
 <script>
-    import NavBar from '@/components/ebi/Nav'
-    import store from "@/store/store.js"
+    import NavBar from '@/components/Nav'
+    import store from "@/store.js"
     export default {
         data () {
             return {
@@ -169,16 +169,6 @@
                             duration:10,  
                             closable: true
                           });
-//                           this.$Message.config({
-//     top: 50,
-//     content:'123',
-//     duration: 3
-// });
-//                           // this.$Notice.error({
-                          //     title: 'Sign Up Error',
-                          //     desc: errArray[0].defaultMessage,
-                          //     duration: 0
-                          // });
                         });
               })
             },
@@ -186,22 +176,17 @@
               window.open('https://www.ebi.ac.uk/data-protection/privacy-notice/pride-new');
             },
             queryCountryList(){
-                //console.log(123)
                 this.$http
                   .get(this.countryListURL)
                   .then(function(res){
                       this.countryList = [];
                       let json = JSON.parse(this.csvJSON(res.body)) 
                       for(let i=0; i < json.length-1; i++){
-                        
                           json[i].value = json[i].value.replace(/^"(.*)"$/, '$1');
                           let item = {}
                           item.label=json[i].value
                           item.value=json[i].value
                           this.countryList.push(item);
-                          //console.log(this.countryList);
-                        //json[i].value.replace(/['"]+/g, '')
-                        //console.log(i);
                       }
                   },function(err){
 
@@ -219,24 +204,13 @@
                   }
                   result.push(obj);
               }
-              //return result; //JavaScript object
               return JSON.stringify(result); //JSON
             },
         },
         mounted:function(){
             this.$refs['formInlineSignUp'].resetFields();
             this.queryCountryList();
-              //this.getProfile();
         },
-        // beforeRouteEnter(to,from,next){
-        //     next(vm=>{
-        //       let username = localStorage.getItem('username') || '';
-        //       if(!username){
-        //         vm.$Message.error({content:'Please Login', duration:2})
-        //         vm.$router.push({name:'landingpage'})
-        //       }
-        //     });
-        // }
     }
 </script>
 <style scoped>
@@ -247,6 +221,12 @@
     .project-title{
       color:rgb(100, 102, 100);
       margin: 20px 0 5px 0;
+    }
+    .privacy-action{
+      color:#444;
+    }
+    .privacy-action:hover{
+      color:#5bc0be;
     }
     @media (min-width: 768px) { 
         .content-container{
