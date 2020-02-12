@@ -7,7 +7,7 @@ const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], reso
 // const Citation = resolve => require(['@/components/landingpage/Citation'], resolve);
 // const Dataset = resolve => require(['@/components/archive/Dataset'], resolve);
 // const NotFound = resolve => require(['@/components/NotFound'], resolve);
-// const MarkdownPage = resolve => require(['@/components/documentation/MarkdownPage'], resolve);
+const MarkdownPage = resolve => require(['@/views/documentation/MarkdownPage'], resolve);
 // const Peptidome = resolve => require(['@/components/peptidome/Peptidome'], resolve);
 // const PeptideSearch = resolve => require(['@/components/peptidome/PeptideSearch'], resolve);
 // const PeptideDownload = resolve => require(['@/components/peptidome/PeptideDownload'], resolve);
@@ -43,25 +43,24 @@ export default new Router({
       name: 'landingpage',
       component: LandingPage
     },
-  //   {
-  //     path: '/markdownpage/:subpage',
-  //     name: 'markdownpage',
-  //     component: MarkdownPage,
-  //      /*children: [
-
-  //           {
-  //               path: "",
-  //               name: 'markdownpage',
-  //               component: MarkdownPage
-  //           },
-  //           {
-  //               path: "aaa/:asd",
-  //               name: 'test',
-  //               component: Test
-  //           }
-  //       ]
-  //     */
-  //   },
+    {
+      path: '/markdownpage/:subpage',
+      name: 'markdownpage',
+      component: MarkdownPage,
+       /*children: [
+            {
+                path: "",
+                name: 'markdownpage',
+                component: MarkdownPage
+            },
+            {
+                path: "aaa/:asd",
+                name: 'test',
+                component: Test
+            }
+        ]
+      */
+    },
   //   {
   //     path: '/archive',
   //     name: 'archive',
