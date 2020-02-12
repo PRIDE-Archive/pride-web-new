@@ -249,6 +249,7 @@
         margin: 10px 0;
         padding: 10px 0;
         border-top: 1px solid rgb(0, 0, 0);
+        font-size: 14px;
     }
 
     .item-title{
