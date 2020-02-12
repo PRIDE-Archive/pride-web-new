@@ -2,17 +2,17 @@
   <div class="landingpage-container">
       <div class="panel nav"><NavBar page="landingpage"/></div>
       <div class="panel resource"><Resource/></div>
-     <!--  <div class="panel statistics"><Statistics/></div>
+      <div class="panel statistics"><Statistics/></div>
       <div class="panel tools"><Tools/></div>
-      <div class="panel news"><News/></div> -->
+     <!--  <div class="panel news"><News/></div> -->
   </div>
 </template>
 
 <script>
   import NavBar from '@/components/Nav'
   import Resource from '@/components/landingpage/Resource'
-  // import Statistics from '@/components/landingpage/Statistics'
-  // import Tools from '@/components/landingpage/Tools'
+  import Statistics from '@/components/landingpage/Statistics'
+  import Tools from '@/components/landingpage/Tools'
   // import News from '@/components/landingpage/News'
   export default {
     name: 'landingpage',
@@ -27,8 +27,8 @@
     components: {
       NavBar,
       Resource,
-      // Statistics,
-      // Tools,
+      Statistics,
+      Tools,
       // News
     },
     mounted: function(){
