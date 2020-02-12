@@ -6,17 +6,17 @@ When a user submits the data to PRIDE Archive, the data is **private** by defaul
 
 The current best way to download and review the PRIDE Archive data is using the [Pride Inspector Toolsuite](./prideinspector). Users and reviewers can use the provided account to log in to PRIDE:
 
-![Reviewer login](../static/markdown/reviewpridedata/files/reviewer-login.png)
+![Reviewer login](../markdown/reviewpridedata/files/reviewer-login.png)
 
 After log-in, a panel listing the dataset (private) under a particular reviewer account will be accessible:
 
 </br>
 
-![Datasets Access](../static/markdown/reviewpridedata/files/private-datasets.png)
+![Datasets Access](../markdown/reviewpridedata/files/private-datasets.png)
 
 Finally, a panel with all the _files_ in the datasets are shown to be downloaded:
 
-![Dataset files](../static/markdown/reviewpridedata/files/private-files.png)
+![Dataset files](../markdown/reviewpridedata/files/private-files.png)
 
 ## Reviewing Partial Submissions
 
@@ -32,16 +32,16 @@ Users can check any relevant peptide identifications in the [RESULT Files](./pri
 
 </br>
 
-![Peptide Table](../static/markdown/prideinspector/files/peptideTable2.png)
+![Peptide Table](../markdown/prideinspector/files/peptideTable2.png)
 
 The **fragment ion table** can be used to visualise the differences between the theoretical identified fragment ions and the experimental ones:
 
 </br>
 
-![Fragmentation table](../static/markdown/reviewpridedata/files/fragmenttable.png)
+![Fragmentation table](../markdown/reviewpridedata/files/fragmenttable.png)
 
 In addition, users can check the **protein coverage** and protein sequence identified for all the identified proteins:
 
-![Fragmentation table](../static/markdown/prideinspector/files/proteinSequence.png)
+![Fragmentation table](../markdown/prideinspector/files/proteinSequence.png)
 
 You can check how to use [PRIDE Inspector here](./prideinspector).
