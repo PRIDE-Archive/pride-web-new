@@ -194,9 +194,11 @@
     }
     .menu-wrapper .ivu-menu-vertical li.ivu-menu-item-selected{
         background:none ;
+        color: #5bc0be !important;
     }
     .menu-wrapper .ivu-menu-vertical li:hover{
         background:#f3f3f3;
+        color: #515a6e;
     }
     @media (min-width: 768px) {
         .content-container{
