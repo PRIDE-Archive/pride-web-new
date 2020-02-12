@@ -2,8 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 //import Index from '@/components/landingpage/Index'
 
-//const Login = () => import('./views/Login.vue')
-//const LandingPage = () => import('./views/landingpage/LandingPage')
 const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], resolve);
 // const Archive = resolve => require(['@/components/archive/Archive'], resolve);
 // const Citation = resolve => require(['@/components/landingpage/Citation'], resolve);
@@ -30,7 +28,7 @@ const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], reso
 // const Register = resolve => require(['@/components/ebi/Register'], resolve);
 // const Publish = resolve => require(['@/components/archive/Publish'], resolve);
 // const EditProfile = resolve => require(['@/components/ebi/EditProfile'], resolve);
-// const Login = resolve => require(['@/components/ebi/Login'], resolve);
+const Login = resolve => require(['@/views/ebi/Login'], resolve);
 // const Forgotpassword = resolve => require(['@/components/ebi/ForgotPassword'], resolve);
 // const Resetpassword = resolve => require(['@/components/ebi/ResetPassword'], resolve);
 
@@ -223,12 +221,12 @@ export default new Router({
   //     component: Register,
 
   //   },
-  //   {
-  //     path:'/login',
-  //     name: 'login',
-  //     component: Login,
+    {
+      path:'/login',
+      name: 'login',
+      component: Login,
 
-  //   },
+    },
   //   {
   //     path:'/archive/login',
   //     name: 'login',
