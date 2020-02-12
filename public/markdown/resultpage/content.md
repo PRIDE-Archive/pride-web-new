@@ -7,7 +7,7 @@ PRIDE Archive result page is an application to visualize and perform a first qua
 
 </br>
 
-![Protein Identification Page](../static/markdown/resultpage/files/protein-panel.png)
+![Protein Identification Page](../markdown/resultpage/files/protein-panel.png)
 
 The protein panel shows all the information about identified proteins:
 
@@ -23,9 +23,9 @@ The protein panel shows all the information about identified proteins:
 
 ## Search panel
 
-In the protein table, a search functionality has been implemented. The user can search by Protein identifier. The clean button ![Protein Identification Page](../static/markdown/resultpage/files/search-clean.png) clean the search results and restore all the proteins identified in the dataset.
+In the protein table, a search functionality has been implemented. The user can search by Protein identifier. The clean button ![Protein Identification Page](../markdown/resultpage/files/search-clean.png) clean the search results and restore all the proteins identified in the dataset.
 
-![Protein Identification Page](../static/markdown/resultpage/files/search-panel-protein.png)
+![Protein Identification Page](../markdown/resultpage/files/search-panel-protein.png)
 
 
 ## Protein Confidence Score
@@ -36,7 +36,7 @@ For the protein level, the PRIDE pipelines perform an inference step using Occam
 
 When a protein is selected in the Protein Identification result Table, the sequence is load into the Sequence panel:
 
-![Protein Identification Page](../static/markdown/resultpage/files/sequence-panel.png)
+![Protein Identification Page](../markdown/resultpage/files/sequence-panel.png)
 
  After the sequence is load into the Sequence panel, all the identified peptides are mapped into the sequence. The result of the mapping is also highlighted in the sequence panel:
 
@@ -72,19 +72,19 @@ Before the merge into peptides and therefore before the peptide level FDR calcul
 
 The Peptide Table also provides the information about each protein identified in the project. It provides information about the peptide sequence, protein identifier, sequence length, number of PSMs, and [Peptide level FDR](./resultpage#peptide_level_fdr).
 
-![Peptide Identification Page](../static/markdown/resultpage/files/peptide-table.png)
+![Peptide Identification Page](../markdown/resultpage/files/peptide-table.png)
 
-In the peptide table, [the search panel](./resultpage#search_panel) allows user to search for peptide sequences in the Peptide Table. The Peptide Sequence in the table highlights ![the post-translational modifications](../static/markdown/resultpage/files/ptm-peptide.png).
+In the peptide table, [the search panel](./resultpage#search_panel) allows user to search for peptide sequences in the Peptide Table. The Peptide Sequence in the table highlights ![the post-translational modifications](../markdown/resultpage/files/ptm-peptide.png).
 
 ## Peptide Spectrum Matches
 
 Similar to the peptide table, the peptide spectrum matches (PSM) table shows the peptide information plus the charge state. When a PSM is selected the corresponding Spectrum is shown in the [Spectrum Panel](./resultpage#spectrum_panel)
 
-![PSM Identification Page](../static/markdown/resultpage/files/psm-table.png)
+![PSM Identification Page](../markdown/resultpage/files/psm-table.png)
 
 ## Spectrum Panel
 
-![PSM Identification Page](../static/markdown/resultpage/files/spectra.png)
+![PSM Identification Page](../markdown/resultpage/files/spectra.png)
 
 ## References
 
