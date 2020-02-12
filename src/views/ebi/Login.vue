@@ -28,8 +28,8 @@
     </div>
 </template>
 <script>
-    import NavBar from '@/components/ebi/Nav'
-    import store from "@/store/store.js"
+    import NavBar from '@/components/Nav'
+    import store from "@/store.js"
     export default {
         data () {
             return {
@@ -150,8 +150,11 @@
     }
     .login-action a{
       border-bottom-style:none !important;
+      color:#444;
     }
-
+    .login-action a:hover{
+      color:#5bc0be;
+    }
     @media (min-width: 768px) {
         .content-container{
             width: 750px;
