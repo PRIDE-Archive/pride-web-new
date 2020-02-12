@@ -47,8 +47,8 @@
 </template>
 <script>
     import LinePrideSimple from '@/components/landingpage/statistics_chart/LineSimple.vue'
-    import SunburstPrideSimple from '@/components/landingpage/statistics_chart/SunburstSimple.vue'  
-    import SankeyPrideSimple from '@/components/landingpage/statistics_chart/SankeySimple.vue'
+    // import SunburstPrideSimple from '@/components/landingpage/statistics_chart/SunburstSimple.vue'  
+    // import SankeyPrideSimple from '@/components/landingpage/statistics_chart/SankeySimple.vue'
     import MapPrideSimple from '@/components/landingpage/statistics_chart/MapSimple.vue'
     import TreePrideSimple from '@/components/landingpage/statistics_chart/TreeSimple.vue'
     import BarHorizontalPrideSimple from '@/components/landingpage/statistics_chart/BarHorizontalSimple.vue'
@@ -71,8 +71,8 @@
         },
         components: {
             LinePrideSimple,
-            SunburstPrideSimple,
-            SankeyPrideSimple,
+            // SunburstPrideSimple,
+            // SankeyPrideSimple,
             MapPrideSimple,
             TreePrideSimple,
             BarHorizontalPrideSimple
@@ -174,6 +174,10 @@
         top: 5px;
         right: 10px;
         border-bottom-style:none !important;
+        color:#444;
+    }
+    .static-more-button:hover{
+      color:#5bc0be;
     }
     .button-wrapper{
         text-align: center;
