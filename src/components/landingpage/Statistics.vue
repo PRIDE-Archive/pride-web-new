@@ -173,11 +173,14 @@
         position: absolute;
         top: 5px;
         right: 10px;
-        border-bottom-style:none !important;
+        border-bottom-width: 1px;
+        border-bottom-style: dotted;
+        border-bottom-color: #444;
         color:#444;
     }
     .static-more-button:hover{
-      color:#5bc0be;
+      color:#5bc0be ;
+      border-bottom-color: #5bc0be;
     }
     .button-wrapper{
         text-align: center;
