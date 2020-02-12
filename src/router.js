@@ -25,7 +25,7 @@ const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], reso
 // const Molecules = resolve => require(['@/components/archive/Molecules'], resolve);
 // const PrivateDataset = resolve => require(['@/components/archive/PrivateDataset'], resolve);
 // const Spectra = resolve => require(['@/components/archive/Spectra'], resolve);
-// const Register = resolve => require(['@/components/ebi/Register'], resolve);
+const Register = resolve => require(['@/views/ebi/Register'], resolve);
 // const Publish = resolve => require(['@/components/archive/Publish'], resolve);
 // const EditProfile = resolve => require(['@/components/ebi/EditProfile'], resolve);
 const Login = resolve => require(['@/views/ebi/Login'], resolve);
@@ -209,30 +209,26 @@ export default new Router({
   //         return { name: 'archive',query: {}}
   //     }
   //   },
-  //   {
-  //     path:'/register',
-  //     name: 'register',
-  //     component: Register,
-
-  //   },
-  //   {
-  //     path:'/archive/register',
-  //     name: 'register',
-  //     component: Register,
-
-  //   },
+    {
+      path:'/register',
+      name: 'register',
+      component: Register,
+    },
+    {
+      path:'/archive/register',
+      name: 'register',
+      component: Register,
+    },
     {
       path:'/login',
       name: 'login',
       component: Login,
-
     },
-  //   {
-  //     path:'/archive/login',
-  //     name: 'login',
-  //     component: Login,
-
-  //   },
+    {
+      path:'/archive/login',
+      name: 'login',
+      component: Login,
+    },
   //   {
   //     path:'/forgotpassword',
   //     name: 'forgotpassword',
