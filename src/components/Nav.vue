@@ -111,7 +111,7 @@
             pageName:'archive',
             homePageName:'landingpage',
             logoWidth:410,
-            logoURL:'logo/PRIDE_logo_Archive.png',
+            logoURL:'/logo/PRIDE_logo_Archive.png',
         }
       }
       else if(page == 'peptidome'){
@@ -119,7 +119,7 @@
             pageName:'peptidome',
             homePageName:'landingpage',
             logoWidth:400,
-            logoURL:'logo/PRIDE_logo_Peptide.png',
+            logoURL:'/logo/PRIDE_logo_Peptide.png',
         }
       }
       else if(page == 'spectra'){
@@ -127,7 +127,7 @@
             pageName:'spectra',
             homePageName:'landingpage',
             logoWidth:400,
-            logoURL:'logo/PRIDE_logo_Archive.png',
+            logoURL:'/logo/PRIDE_logo_Archive.png',
         }
       }
       else if(page == 'landingpage'){
@@ -135,7 +135,7 @@
             pageName:'landingpage',
             homePageName:'landingpage',
             logoWidth:500,
-            logoURL:'logo/PRIDE_logo.png',
+            logoURL:'/logo/PRIDE_logo.png',
         }
       }
       else{
@@ -143,7 +143,7 @@
             pageName:'archive',
             homePageName:'landingpage',
             logoWidth:410,
-            logoURL:'logo/PRIDE_logo_Archive.png',
+            logoURL:'/logo/PRIDE_logo_Archive.png',
         }
       }
       return item;
