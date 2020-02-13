@@ -193,11 +193,11 @@ export default new Router({
       name: 'resetpassword',
       component: Resetpassword,
     },
-  //   {
-  //     path:'/archive/projects/:id/publish',
-  //     name: 'publish',
-  //     component: Publish
-  //   },
+    {
+      path:'/archive/projects/:id/publish',
+      name: 'publish',
+      component: Publish
+    },
     {
       path:'/archive/users/profile/edit',
       name: 'editprofile',
