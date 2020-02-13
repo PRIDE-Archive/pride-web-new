@@ -67,11 +67,6 @@ export default new Router({
   //     name: 'citation',
   //     component: Citation
   //   },
-  //   // {
-  //   //   path: '/test',
-  //   //   name: 'test',
-  //   //   component: Test
-  //   // },
   //   {
   //     path:'/archive/projects/:id',
   //     name: 'dataset',
