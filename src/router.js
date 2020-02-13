@@ -16,10 +16,10 @@ const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary']
 // const ClusterProjects = resolve => require(['@/components/peptidome/ClusterProjects'], resolve);
 // const Assay = resolve => require(['@/components/peptidome/Assay'], resolve);
 // const StatisticsDetails = resolve => require(['@/components/landingpage/StatisticsDetails'], resolve);
-// const Profile = resolve => require(['@/components/ebi/Profile'], resolve);
+const Profile = resolve => require(['@/views/ebi/Profile'], resolve);
 // const Molecules = resolve => require(['@/components/archive/Molecules'], resolve);
 // const PrivateDataset = resolve => require(['@/components/archive/PrivateDataset'], resolve);
-// const Spectra = resolve => require(['@/components/archive/Spectra'], resolve);
+// const Spectra = resolve => require(['@/views/archive/Spectra'], resolve);
 const Register = resolve => require(['@/views/ebi/Register'], resolve);
 // const Publish = resolve => require(['@/components/archive/Publish'], resolve);
 // const EditProfile = resolve => require(['@/components/ebi/EditProfile'], resolve);
@@ -86,11 +86,11 @@ export default new Router({
   //     name: 'peptidesearch',
   //     component: PeptideSearch
   //   },
-  //   {
-  //     path: '/archive/spectra',
-  //     name: 'spectra',
-  //     component: Spectra
-  //   },
+    // {
+    //   path: '/archive/spectra',
+    //   name: 'spectra',
+    //   component: Spectra
+    // },
   //   {
   //     path: '/peptidome/peptidedownload',
   //     name: 'peptidedownload',
@@ -126,35 +126,21 @@ export default new Router({
   //     name: 'statisticsdetails',
   //     component: StatisticsDetails
   //   },
-  //   {
-  //     path:'/profile/:id',
-  //     name: 'profile',
-  //     component: Profile,
-
-  //   },
-  //   {
-  //     path: '/searchSummary.do',
-  //     redirect: to => {
-  //       let id = to.query.identificationAccessionNumber
-  //       if(id)
-  //           return { name: 'archive', query: {keyword:id} }
-  //       else
-  //           return { name: '404' }
-  //       //return { path: '/archive/spectra', query: null }
-  //       //console.log(to)
-  //       // if (query.to === 'foo') {
-  //       //   return { path: '/foo', query: null }
-  //       // }
-  //       // if (hash === '#baz') {
-  //       //   return { name: 'baz', hash: '' }
-  //       // }
-  //       // if (params.id) {
-  //       //   return '/with-params/:id'
-  //       // } else {
-  //       //   return '/bar'
-  //       // }
-  //     }
-  //   },
+    {
+      path:'/profile/:id',
+      name: 'profile',
+      component: Profile,
+    },
+    // {
+    //   path: '/searchSummary.do',
+    //   redirect: to => {
+    //     let id = to.query.identificationAccessionNumber
+    //     if(id)
+    //         return { name: 'archive', query: {keyword:id} }
+    //     else
+    //         return { name: '404' }
+    //   }
+    // },
   //   {
   //     path: '/startRegistration.do',
   //     redirect: to => {
@@ -225,8 +211,6 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         to.replace();
         console.log(to);
-
-
       }*/
     },
     {
@@ -237,8 +221,6 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         to.replace();
         console.log(to);
-
-
       }*/
     },
   ],
