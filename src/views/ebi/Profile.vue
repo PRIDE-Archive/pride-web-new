@@ -367,8 +367,8 @@
     </div>
 </template>
 <script>
-    import NavBar from '@/components/ebi/Nav'
-    import store from "@/store/store.js"
+    import NavBar from '@/components/Nav'
+    import store from "@/store.js"
     export default {
         data () {
             const errorInfo = {
@@ -837,6 +837,14 @@
         width: 200px !important;
         height: 100%;
         /*background-color: */
+    }
+    .menu-wrapper .ivu-menu-vertical li.ivu-menu-item-selected{
+        background:none ;
+        color: #5bc0be !important;
+    }
+    .menu-wrapper .ivu-menu-vertical li:hover{
+        background:#f3f3f3;
+        color: #515a6e;
     }
     .ivu-menu{
         z-index: 100;
