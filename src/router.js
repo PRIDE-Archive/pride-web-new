@@ -22,7 +22,7 @@ const Profile = resolve => require(['@/views/ebi/Profile'], resolve);
 // const Spectra = resolve => require(['@/views/archive/Spectra'], resolve);
 const Register = resolve => require(['@/views/ebi/Register'], resolve);
 // const Publish = resolve => require(['@/components/archive/Publish'], resolve);
-// const EditProfile = resolve => require(['@/components/ebi/EditProfile'], resolve);
+const EditProfile = resolve => require(['@/views/ebi/EditProfile'], resolve);
 const Login = resolve => require(['@/views/ebi/Login'], resolve);
 const Forgotpassword = resolve => require(['@/views/ebi/ForgotPassword'], resolve);
 const Resetpassword = resolve => require(['@/views/ebi/ResetPassword'], resolve);
@@ -198,11 +198,11 @@ export default new Router({
   //     name: 'publish',
   //     component: Publish
   //   },
-  //   {
-  //     path:'/archive/users/profile/edit',
-  //     name: 'editprofile',
-  //     component: EditProfile
-  //   },
+    {
+      path:'/archive/users/profile/edit',
+      name: 'editprofile',
+      component: EditProfile
+    },
     {
       path:'/404',
       name: '404',
