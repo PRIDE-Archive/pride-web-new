@@ -46,8 +46,8 @@
     </div>
 </template>
 <script>
-    import NavBar from '@/components/ebi/Nav'
-    import store from "@/store/store.js"
+    import NavBar from '@/components/Nav'
+    import store from "@/store.js"
     export default {
         data () {
             return {
@@ -115,7 +115,7 @@
                   },
                 ],
                 countryList:[],
-                countryListURL: this.$store.state.baseURL + '/static/country/index.csv',
+                countryListURL: this.$store.state.baseURL + '/country/index.csv',
                 viewProfileURL: this.$store.state.basePrivateURL + '/user/view-profile',
             }
         },
