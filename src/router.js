@@ -24,7 +24,7 @@ const Register = resolve => require(['@/views/ebi/Register'], resolve);
 // const Publish = resolve => require(['@/components/archive/Publish'], resolve);
 // const EditProfile = resolve => require(['@/components/ebi/EditProfile'], resolve);
 const Login = resolve => require(['@/views/ebi/Login'], resolve);
-// const Forgotpassword = resolve => require(['@/components/ebi/ForgotPassword'], resolve);
+const Forgotpassword = resolve => require(['@/views/ebi/ForgotPassword'], resolve);
 // const Resetpassword = resolve => require(['@/components/ebi/ResetPassword'], resolve);
 
 Vue.use(Router)
@@ -191,17 +191,17 @@ export default new Router({
       name: 'login',
       component: Login,
     },
-  //   {
-  //     path:'/forgotpassword',
-  //     name: 'forgotpassword',
-  //     component: Forgotpassword,
+    {
+      path:'/forgotpassword',
+      name: 'forgotpassword',
+      component: Forgotpassword,
 
-  //   },
-  //   {
-  //     path: '/archive/users/forgotpassword',
-  //     name: 'forgotpassword',
-  //     component: Forgotpassword,
-  //   },
+    },
+    {
+      path: '/archive/users/forgotpassword',
+      name: 'forgotpassword',
+      component: Forgotpassword,
+    },
   //   {
   //     path:'/resetpassword/:reference',
   //     name: 'resetpassword',
