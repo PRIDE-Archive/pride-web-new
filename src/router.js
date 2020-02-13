@@ -8,10 +8,10 @@ const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], reso
 // const Dataset = resolve => require(['@/components/archive/Dataset'], resolve);
 // const NotFound = resolve => require(['@/components/NotFound'], resolve);
 const MarkdownPage = resolve => require(['@/views/documentation/MarkdownPage'], resolve);
-// const Peptidome = resolve => require(['@/components/peptidome/Peptidome'], resolve);
+const Peptidome = resolve => require(['@/views/peptidome/Peptidome'], resolve);
 // const PeptideSearch = resolve => require(['@/components/peptidome/PeptideSearch'], resolve);
 // const PeptideDownload = resolve => require(['@/components/peptidome/PeptideDownload'], resolve);
-// const SpectrumLibrary = resolve => require(['@/components/peptidome/SpectrumLibrary'], resolve);
+const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary'], resolve);
 // const PeptideDetails = resolve => require(['@/components/peptidome/PeptideDetails'], resolve);
 // const PSM = resolve => require(['@/components/peptidome/PSM'], resolve);
 // const ClusterProjects = resolve => require(['@/components/peptidome/ClusterProjects'], resolve);
@@ -91,11 +91,11 @@ export default new Router({
   //     name: 'privatedataset',
   //     component: PrivateDataset
   //   },
-  //   {
-  //     path: '/peptidome',
-  //     name: 'peptidome',
-  //     component: Peptidome
-  //   },
+    {
+      path: '/peptidome',
+      name: 'peptidome',
+      component: Peptidome
+    },
   //   {
   //     path: '/peptidome/peptidesearch',
   //     name: 'peptidesearch',
@@ -111,11 +111,11 @@ export default new Router({
   //     name: 'peptidedownload',
   //     component: PeptideDownload
   //   },
-  //   {
-  //     path: '/spectrumlibrary',
-  //     name: 'spectrumlibrary',
-  //     component: SpectrumLibrary
-  //   },
+    {
+      path: '/spectrumlibrary',
+      name: 'spectrumlibrary',
+      component: SpectrumLibrary
+    },
   //   {
   //     path:'/peptidome/peptidedetails/:id',
   //     name: 'peptidedetails',
