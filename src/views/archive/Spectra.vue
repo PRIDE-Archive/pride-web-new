@@ -150,13 +150,13 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
-  import store from "@/store/store.js"
+  import NavBar from '@/components/Nav'
+  import store from "@/store.js"
   export default {
     name: 'archive',
     data(){
       return {
-          iframeURL:this.$store.state.baseURL + '/static/lorikeet/html/pride.html',
+          iframeURL:this.$store.state.baseURL + '/lorikeet/html/pride.html',
           proteinAccessionInputModel:'',
           peptideSequenceInputModel:'',
           proteinSequence:'',
