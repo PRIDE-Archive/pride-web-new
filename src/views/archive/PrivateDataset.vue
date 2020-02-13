@@ -424,8 +424,8 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
-  import store from "@/store/store.js"
+  import NavBar from '@/components/Nav'
+  import store from "@/store.js"
   export default {
     name: 'archive',
     data(){
