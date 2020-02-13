@@ -143,8 +143,8 @@
   </div>
 </template>
 <script>
-  import NavBar from '@/components/ebi/Nav'
-  import store from "@/store/store.js"
+  import NavBar from '@/components/Nav'
+  import store from "@/store.js"
   export default {
     name: 'notfound',
     components: {
@@ -203,9 +203,9 @@
       return {
         msg: '',
         value1: 0,
-        image1URL: this.$store.state.baseURL + '/static/peptidome/tutorial-1.png',
-        image2URL: this.$store.state.baseURL + '/static/peptidome/tutorial-2.png',
-        image3URL: this.$store.state.baseURL + '/static/peptidome/tutorial-3.png',
+        image1URL: this.$store.state.baseURL + '/peptidome/tutorial-1.png',
+        image2URL: this.$store.state.baseURL + '/peptidome/tutorial-2.png',
+        image3URL: this.$store.state.baseURL + '/peptidome/tutorial-3.png',
 
       }
     },
