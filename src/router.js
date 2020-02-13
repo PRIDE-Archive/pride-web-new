@@ -18,10 +18,10 @@ const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary']
 // const StatisticsDetails = resolve => require(['@/components/landingpage/StatisticsDetails'], resolve);
 const Profile = resolve => require(['@/views/ebi/Profile'], resolve);
 // const Molecules = resolve => require(['@/components/archive/Molecules'], resolve);
-// const PrivateDataset = resolve => require(['@/components/archive/PrivateDataset'], resolve);
+const PrivateDataset = resolve => require(['@/views/archive/PrivateDataset'], resolve);
 // const Spectra = resolve => require(['@/views/archive/Spectra'], resolve);
 const Register = resolve => require(['@/views/ebi/Register'], resolve);
-// const Publish = resolve => require(['@/components/archive/Publish'], resolve);
+const Publish = resolve => require(['@/views/archive/Publish'], resolve);
 const EditProfile = resolve => require(['@/views/ebi/EditProfile'], resolve);
 const Login = resolve => require(['@/views/ebi/Login'], resolve);
 const Forgotpassword = resolve => require(['@/views/ebi/ForgotPassword'], resolve);
@@ -71,11 +71,11 @@ export default new Router({
   //     name: 'molecules',
   //     component: Molecules
   //   },
-  //   {
-  //     path:'/archive/projects/:id/private',
-  //     name: 'privatedataset',
-  //     component: PrivateDataset
-  //   },
+    {
+      path:'/archive/projects/:id/private',
+      name: 'privatedataset',
+      component: PrivateDataset
+    },
     {
       path: '/peptidome',
       name: 'peptidome',
@@ -141,12 +141,12 @@ export default new Router({
     //         return { name: '404' }
     //   }
     // },
-  //   {
-  //     path: '/startRegistration.do',
-  //     redirect: to => {
-  //         return { name: 'register'}
-  //     }
-  //   },
+    {
+      path: '/startRegistration.do',
+      redirect: to => {
+          return { name: 'register'}
+      }
+    },
   //   {
   //     path: '/archive/simpleSearch',
   //     redirect: to => {
