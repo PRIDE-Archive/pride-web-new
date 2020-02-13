@@ -4,7 +4,6 @@ import Router from 'vue-router'
 
 const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], resolve);
 // const Archive = resolve => require(['@/components/archive/Archive'], resolve);
-// const Citation = resolve => require(['@/components/landingpage/Citation'], resolve);
 // const Dataset = resolve => require(['@/components/archive/Dataset'], resolve);
 const NotFound = resolve => require(['@/views/NotFound'], resolve);
 const MarkdownPage = resolve => require(['@/views/documentation/MarkdownPage'], resolve);
@@ -61,11 +60,6 @@ export default new Router({
   //     path: '/archive',
   //     name: 'archive',
   //     component: Archive
-  //   },
-  //   {
-  //     path: '/citation',
-  //     name: 'citation',
-  //     component: Citation
   //   },
   //   {
   //     path:'/archive/projects/:id',
