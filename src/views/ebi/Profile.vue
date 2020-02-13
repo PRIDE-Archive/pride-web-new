@@ -72,7 +72,7 @@
                     <p style="margin-top: 10px;">
                         <!-- <span class="project-info">{{projectItemsProjectDescription}}: </span> -->
                         <text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{item.projectDescription}}</text-highlight>
-                        <router-link :to="{name:'privatedataset',  params: { id: item.accession}}">(More)</router-link>
+                        <router-link class="resource-id" :to="{name:'privatedataset',  params: { id: item.accession}}">(More)</router-link>
                         <!-- <a @click="gotoDetails(item.accession)">(More)</a> -->
                       <!--<read-more class="readMore" more-str="(More)" :text="item.projectDescription" link="#" less-str="Less" :max-chars="200"></read-more>-->
                     </p>
@@ -166,7 +166,7 @@
                         <p style="margin-top: 10px;">
                             <!-- <span class="project-info">{{projectItemsProjectDescription}}: </span> -->
                             <text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{item.projectDescription}}</text-highlight>
-                            <router-link :to="{name:'privatedataset',  params: { id: item.accession}}">(More)</router-link>
+                            <router-link class="resource-id" :to="{name:'privatedataset',  params: { id: item.accession}}">(More)</router-link>
                             <!-- <a @click="gotoDetails(item.accession)">(More)</a> -->
                           <!--<read-more class="readMore" more-str="(More)" :text="item.projectDescription" link="#" less-str="Less" :max-chars="200"></read-more>-->
                         </p>
@@ -261,7 +261,7 @@
                         <p style="margin-top: 10px;">
                             <!-- <span class="project-info">{{projectItemsProjectDescription}}: </span> -->
                             <text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{item.projectDescription}}</text-highlight>
-                            <router-link :to="{name:'privatedataset',  params: { id: item.accession}}">(More)</router-link>
+                            <router-link class="resource-id" :to="{name:'privatedataset',  params: { id: item.accession}}">(More)</router-link>
                             <!-- <a @click="gotoDetails(item.accession)">(More)</a> -->
                           <!--<read-more class="readMore" more-str="(More)" :text="item.projectDescription" link="#" less-str="Less" :max-chars="200"></read-more>-->
                         </p>
@@ -990,6 +990,10 @@
     .resource-id{
       font-size: 14px;
       margin-right: 2px;
+      color:#444;
+    }
+    .resource-id:hover{
+        color: #5bc0be
     }
     .resource-title{
       font-weight: bold;
