@@ -17,10 +17,6 @@ const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary']
 // const ClusterProjects = resolve => require(['@/components/peptidome/ClusterProjects'], resolve);
 // const Assay = resolve => require(['@/components/peptidome/Assay'], resolve);
 // const StatisticsDetails = resolve => require(['@/components/landingpage/StatisticsDetails'], resolve);
-// const Annotation = resolve => require(['@/components/annotation/Annotation'], resolve);
-// const Check = resolve => require(['@/components/annotation/Check'], resolve);
-// const Sample = resolve => require(['@/components/annotation/Sample'], resolve);
-// const Annotate = resolve => require(['@/components/annotation/Annotate'], resolve);
 // const Profile = resolve => require(['@/components/ebi/Profile'], resolve);
 // const Molecules = resolve => require(['@/components/archive/Molecules'], resolve);
 // const PrivateDataset = resolve => require(['@/components/archive/PrivateDataset'], resolve);
@@ -140,28 +136,6 @@ export default new Router({
   //     path:'/statisticsdetails',
   //     name: 'statisticsdetails',
   //     component: StatisticsDetails
-  //   },
-  //   {
-  //     path:'/annotation',
-  //     name: 'annotation',
-  //     component: Annotation,
-
-  //   },
-  //   {
-  //     path:'/annotation/:id/check',
-  //     name: 'check',
-  //     component: Check,
-  //   },
-  //   {
-  //     path:'/annotation/:id/sample',
-  //     name: 'sample',
-  //     component: Sample,
-
-  //   },
-  //   {
-  //     path:'/annotation/:id/annotate',
-  //     name: 'annotate',
-  //     component: Annotate,
   //   },
   //   {
   //     path:'/profile/:id',
