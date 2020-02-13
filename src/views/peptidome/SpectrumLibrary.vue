@@ -17,7 +17,7 @@
                         <p slot="title">{{item.speciesScientificName}}</p>
                         <div class="card-content">
                             <p>Common name: {{item.speciesName}}</p>
-                            <p>Taxonomy: <a @click="goToUniprot(item.taxonomyId)" v-if="item.taxonomyId !='0'">{{item.taxonomyId}}</a><span v-else>Unknown</span></p>
+                            <p>Taxonomy: <a class="taxonomy-action" @click="goToUniprot(item.taxonomyId)" v-if="item.taxonomyId !='0'">{{item.taxonomyId}}</a><span v-else>Unknown</span></p>
                             <p>Number of spectra: {{item.numberOfSpectra}}</p>
                             <p>Number of peptides: {{item.numberOfPeptides}}</p>
                             <p>File Size: {{Math.round(item.fileSize/1024/1024)}}M</p>
@@ -32,7 +32,7 @@
     </div>
 </template>
 <script>
-    import NavBar from '@/components/ebi/Nav'
+    import NavBar from '@/components/Nav'
     export default {
         data () {
             return {
@@ -142,6 +142,13 @@
         color:white;
         border-bottom-style:none;
     }
+    .taxonomy-action{
+        color:#444;
+    }
+    .taxonomy-action:hover{
+        color:#5bc0be;
+    }
+    
     @media (max-width: 700px) { 
       .item{ 
         width: calc((100% - 0px) / 1 - 1px);
