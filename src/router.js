@@ -6,7 +6,7 @@ const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], reso
 // const Archive = resolve => require(['@/components/archive/Archive'], resolve);
 // const Citation = resolve => require(['@/components/landingpage/Citation'], resolve);
 // const Dataset = resolve => require(['@/components/archive/Dataset'], resolve);
-// const NotFound = resolve => require(['@/components/NotFound'], resolve);
+const NotFound = resolve => require(['@/views/NotFound'], resolve);
 const MarkdownPage = resolve => require(['@/views/documentation/MarkdownPage'], resolve);
 const Peptidome = resolve => require(['@/views/peptidome/Peptidome'], resolve);
 // const PeptideSearch = resolve => require(['@/components/peptidome/PeptideSearch'], resolve);
@@ -224,29 +224,29 @@ export default new Router({
   //     name: 'editprofile',
   //     component: EditProfile
   //   },
-  //   {
-  //     path:'/404',
-  //     name: '404',
-  //     component: NotFound,
-  //     /*
-  //     beforeEnter: (to, from, next) => {
-  //       to.replace();
-  //       console.log(to);
+    {
+      path:'/404',
+      name: '404',
+      component: NotFound,
+      /*
+      beforeEnter: (to, from, next) => {
+        to.replace();
+        console.log(to);
 
 
-  //     }*/
-  //   },
-  //   {
-  //     path:'*',
-  //     name: 'notfound',
-  //     component: NotFound,
-  //     /*
-  //     beforeEnter: (to, from, next) => {
-  //       to.replace();
-  //       console.log(to);
+      }*/
+    },
+    {
+      path:'*',
+      name: 'notfound',
+      component: NotFound,
+      /*
+      beforeEnter: (to, from, next) => {
+        to.replace();
+        console.log(to);
 
 
-  //     }*/
-  //   },
+      }*/
+    },
   ],
 })
