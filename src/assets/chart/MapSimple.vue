@@ -2,7 +2,7 @@
     <chart class="simple-map-pride" :options="options" :auto-resize="true"></chart>
 </template>
 <script>
-import Map from '../../../../static/map/map.json'
+import Map from '@/assets/map/map.json'
 export default {
   data: function () {
     var latlong = Map.latlong;
