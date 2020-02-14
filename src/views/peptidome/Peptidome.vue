@@ -274,6 +274,7 @@
 }
 .item-content p{
     margin-top: 10px;
+    text-align: justify;
 }
 .row a{
     color: #666;
