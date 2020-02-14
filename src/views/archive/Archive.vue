@@ -1039,6 +1039,10 @@
     .resource-id{
       font-size: 14px;
       margin-right: 2px;
+      color:#444;
+    }
+    .resource-id:hover{
+      color:#5bc0be;
     }
     .resource-title{
       font-weight: bold;
