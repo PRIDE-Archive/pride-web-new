@@ -131,32 +131,32 @@ export default new Router({
       name: 'profile',
       component: Profile,
     },
-    // {
-    //   path: '/searchSummary.do',
-    //   redirect: to => {
-    //     let id = to.query.identificationAccessionNumber
-    //     if(id)
-    //         return { name: 'archive', query: {keyword:id} }
-    //     else
-    //         return { name: '404' }
-    //   }
-    // },
+    {
+      path: '/searchSummary.do',
+      redirect: to => {
+        let id = to.query.identificationAccessionNumber
+        if(id)
+            return { name: 'archive', query: {keyword:id} }
+        else
+            return { name: '404' }
+      }
+    },
     {
       path: '/startRegistration.do',
       redirect: to => {
           return { name: 'register'}
       }
     },
-  //   {
-  //     path: '/archive/simpleSearch',
-  //     redirect: to => {
-  //       let query = to.query
-  //       if(query.q)
-  //         return { name: 'archive', query: {keyword:query.q} }
-  //       else
-  //         return { name: 'archive',query: {}}
-  //     }
-  //   },
+    {
+      path: '/archive/simpleSearch',
+      redirect: to => {
+        let query = to.query
+        if(query.q)
+          return { name: 'archive', query: {keyword:query.q} }
+        else
+          return { name: 'archive',query: {}}
+      }
+    },
     {
       path:'/register',
       name: 'register',
