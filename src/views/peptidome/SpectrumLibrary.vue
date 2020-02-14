@@ -171,7 +171,7 @@
       }
       .button-wrapper a{
             padding: 6px 0px;
-            width:115px;
+            width:125px;
         }
     }
     @media (max-width: 1910px) and (min-width: 1511px){ 
