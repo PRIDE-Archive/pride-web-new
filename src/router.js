@@ -4,7 +4,7 @@ import Router from 'vue-router'
 
 const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], resolve);
 const Archive = resolve => require(['@/views/archive/Archive'], resolve);
-// const Dataset = resolve => require(['@/components/archive/Dataset'], resolve);
+const Dataset = resolve => require(['@/views/archive/Dataset'], resolve);
 const NotFound = resolve => require(['@/views/NotFound'], resolve);
 const MarkdownPage = resolve => require(['@/views/documentation/MarkdownPage'], resolve);
 const Peptidome = resolve => require(['@/views/peptidome/Peptidome'], resolve);
@@ -61,11 +61,11 @@ export default new Router({
       name: 'archive',
       component: Archive
     },
-  //   {
-  //     path:'/archive/projects/:id',
-  //     name: 'dataset',
-  //     component: Dataset
-  //   },
+    {
+      path:'/archive/projects/:id',
+      name: 'dataset',
+      component: Dataset
+    },
   //   {
   //     path:'/archive/projects/:id/results',
   //     name: 'molecules',
