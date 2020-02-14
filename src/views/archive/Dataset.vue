@@ -218,7 +218,7 @@
                        <p slot="title" class="project-file-title-container">
                         <span> <i class="fas fa-download icon-tag"></i>Project Files</span>
                         <span class="sort-wrapper">
-                            <Button class= "download-button" size="large" @click="projectFtp(projectDownload)">Project FTP</Button>
+                            <a class="ftp-button"  @click="projectFtp(projectDownload)">Project FTP</a>
                             <!-- <span style="margin-left: 10px">Sort by: </span>
                             <div class="sortOption">
                                 <Select v-model="pageDownLoadSort" size="small" style="width:95px" @on-change="sortChange">
@@ -429,8 +429,8 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
-  import store from "@/store/store.js"
+  import NavBar from '@/components/Nav'
+  import store from "@/store.js"
   export default {
     name: 'archive',
     data(){
@@ -1501,6 +1501,17 @@
   .sort-wrapper{
     display:flex;
     align-items: center;
+  }
+  .ftp-button{
+    color: white !important;
+    padding: 4px 10px;
+    font-size: 12px;
+    width: 100%;
+    border-radius: 3px !important;
+    font-weight: 700;
+    background-color: #5bc0be;
+    border-radius: 3px;
+    border-bottom-style:none !important;
   }
   /*
   @media (min-width: 768px) {
