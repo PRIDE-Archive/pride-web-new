@@ -9,7 +9,7 @@ const NotFound = resolve => require(['@/views/NotFound'], resolve);
 const MarkdownPage = resolve => require(['@/views/documentation/MarkdownPage'], resolve);
 const Peptidome = resolve => require(['@/views/peptidome/Peptidome'], resolve);
 const PeptideSearch = resolve => require(['@/views/peptidome/PeptideSearch'], resolve);
-// const PeptideDownload = resolve => require(['@/components/peptidome/PeptideDownload'], resolve);
+const PeptideDownload = resolve => require(['@/views/peptidome/PeptideDownload'], resolve);
 const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary'], resolve);
 // const PeptideDetails = resolve => require(['@/components/peptidome/PeptideDetails'], resolve);
 // const PSM = resolve => require(['@/components/peptidome/PSM'], resolve);
@@ -91,11 +91,11 @@ export default new Router({
     //   name: 'spectra',
     //   component: Spectra
     // },
-  //   {
-  //     path: '/peptidome/peptidedownload',
-  //     name: 'peptidedownload',
-  //     component: PeptideDownload
-  //   },
+    {
+      path: '/peptidome/peptidedownload',
+      name: 'peptidedownload',
+      component: PeptideDownload
+    },
     {
       path: '/spectrumlibrary',
       name: 'spectrumlibrary',
