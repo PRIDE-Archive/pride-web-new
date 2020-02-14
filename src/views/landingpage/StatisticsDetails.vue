@@ -113,15 +113,15 @@
     </div>
 </template>
 <script>
-    import TreetPride from './statistics_chart/Tree.vue'
-    import SunburstPride from './statistics_chart/Sunburst.vue'
-    import SankeyPride from './statistics_chart/Sankey.vue'
-    import LinePride from './statistics_chart/Line.vue'
-    import PiePride from './statistics_chart/Pie.vue'
-    import MapPride from './statistics_chart/Map.vue'
-    import BarHorizontalPride from './statistics_chart/BarHorizontal.vue'
-    import NavBar from '@/components/ebi/Nav'
-    import store from "@/store/store.js"
+    import TreetPride from '@/assets/chart/Tree.vue'
+    import SunburstPride from '@/assets/chart/Sunburst.vue'
+    import SankeyPride from '@/assets/chart/Sankey.vue'
+    import LinePride from '@/assets/chart/Line.vue'
+    import PiePride from '@/assets/chart/Pie.vue'
+    import MapPride from '@/assets/chart/Map.vue'
+    import BarHorizontalPride from '@/assets/chart/BarHorizontal.vue'
+    import NavBar from '@/components/Nav'
+    import store from "@/store.js"
     export default {
         data () {
             return {
