@@ -45,6 +45,9 @@ export default {
   .page-container .ivu-select-dropdown-list{
     margin-left: 0 !important;
   }
+  .ivu-card-head p{
+    font-size: 14px !important;
+  }
   a{
         color:#495060;
     }
