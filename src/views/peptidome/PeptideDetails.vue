@@ -152,14 +152,14 @@
     </div>
 </template>
 <script>
-    import PiesSecies from '@/components/peptidome/chart/PieSpecies.vue'
-    import Modifications from '@/components/peptidome/chart/Modifications.vue'
-    import NavBar from '@/components/ebi/Nav'
-    import store from "@/store/store.js"
+    import PiesSecies from '@/assets/chart/PieSpecies.vue'
+    import Modifications from '@/assets/chart/Modifications.vue'
+    import NavBar from '@/components/Nav'
+    import store from "@/store.js"
     export default {
         data () {
             return {
-                iframeURL: this.$store.state.baseURL + '/static/lorikeet/html/pride.html',
+                iframeURL: this.$store.state.baseURL + '/lorikeet/html/pride.html',
                 clusterIDApi:'https://www.ebi.ac.uk/pride/ws/cluster/cluster/' + this.$route.params.id,
                 clusterSpeciesApi:'https://www.ebi.ac.uk/pride/ws/cluster/cluster/'+this.$route.params.id+'/species',
                 clusterModificationApi:'https://www.ebi.ac.uk/pride/ws/cluster/cluster/'+this.$route.params.id+'/modification',
