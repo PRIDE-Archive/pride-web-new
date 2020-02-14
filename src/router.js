@@ -15,7 +15,7 @@ const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary']
 // const PSM = resolve => require(['@/components/peptidome/PSM'], resolve);
 // const ClusterProjects = resolve => require(['@/components/peptidome/ClusterProjects'], resolve);
 // const Assay = resolve => require(['@/components/peptidome/Assay'], resolve);
-// const StatisticsDetails = resolve => require(['@/components/landingpage/StatisticsDetails'], resolve);
+const StatisticsDetails = resolve => require(['@/views/landingpage/StatisticsDetails'], resolve);
 const Profile = resolve => require(['@/views/ebi/Profile'], resolve);
 // const Molecules = resolve => require(['@/components/archive/Molecules'], resolve);
 const PrivateDataset = resolve => require(['@/views/archive/PrivateDataset'], resolve);
@@ -121,11 +121,11 @@ export default new Router({
   //     name: 'assay',
   //     component: Assay
   //   },
-  //   {
-  //     path:'/statisticsdetails',
-  //     name: 'statisticsdetails',
-  //     component: StatisticsDetails
-  //   },
+    {
+      path:'/statisticsdetails',
+      name: 'statisticsdetails',
+      component: StatisticsDetails
+    },
     {
       path:'/profile/:id',
       name: 'profile',
