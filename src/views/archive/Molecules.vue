@@ -11,7 +11,7 @@
                           <span class="right">
                               <Input v-model="proteinAccessionInputModel" placeholder="Enter something..." style="width: 200px" size="small"></Input>
                               <a href="javascript:void(0)"><Icon type="ios-search" size="20" @click="searchProtein"></Icon></a>
-                              <a href="javascript:void(0)"><Icon type="ios-refresh-empty" size="24" @click="refreshProteinTable"></Icon></a>
+                              <a href="javascript:void(0)"><Icon type="ios-refresh" size="24" @click="refreshProteinTable"></Icon></a>
                               <!-- <Dropdown placement="bottom-start" class="sort-dropdown" @on-click="proteinTableSortChange">
                                   <a href="javascript:void(0)">
                                       <Icon type="arrow-swap" size="20"></Icon>
@@ -43,8 +43,8 @@
                     <p slot="title" class="table-header"> 
                         <span><i class="fas fa-download icon-tag"></i>Sequence</span>
                         <span class="right">
-                            <a v-if="proteinSequenceCollapse" href="javascript:void(0)"><Icon type="arrow-right-b" size="20" @click="proteinTableCollapseChange(false)"></Icon></a>
-                            <a v-else href="javascript:void(0)"><Icon type="arrow-down-b" size="20" @click="proteinTableCollapseChange(true)"></Icon></a>
+                            <a v-if="proteinSequenceCollapse" href="javascript:void(0)"><Icon type="md-arrow-dropright" size="24" @click="proteinTableCollapseChange(false)"></Icon></a>
+                            <a v-else href="javascript:void(0)"><Icon type="md-arrow-dropdown" size="24" @click="proteinTableCollapseChange(true)"></Icon></a>
                         </span>
                     </p>
                     <div class="sequence-container">
@@ -94,10 +94,10 @@
                           <span class="right">
                               <Input v-model="peptideSequenceInputModel" placeholder="Enter something..." style="width: 200px" size="small"></Input>
                               <a href="javascript:void(0)"><Icon type="ios-search" size="20" @click="searchPeptide"></Icon></a>
-                              <a href="javascript:void(0)"><Icon type="ios-refresh-empty" size="24" @click="refreshPeptideTable"></Icon></a>
-                              <Dropdown placement="bottom-start" class="sort-dropdown" @on-click="peptideTableSortChange">
+                              <a href="javascript:void(0)"><Icon type="ios-refresh" size="24" @click="refreshPeptideTable"></Icon></a>
+                              <Dropdown placement="bottom-start" class="sort-dropdown" @on-click="peptideTableSortChange"> 
                                   <a href="javascript:void(0)">
-                                      <Icon type="arrow-swap" size="20"></Icon>
+                                      <Icon type="md-repeat" size="20"></Icon>
                                   </a>
                                   <DropdownMenu slot="list">
                                       <DropdownItem v-for="item in peptideSortOptions" :name="item.key">{{item.label}}</DropdownItem>
@@ -150,8 +150,8 @@
                        <p slot="title" class="table-header">
                           <span><i class="fas fa-download icon-tag"></i>Spectrum</span>
                           <span class="right">
-                              <a v-if="spectrumTableCollapse" href="javascript:void(0)"><Icon type="arrow-right-b" size="20" @click="spectrumTableCollapseChange(false)"></Icon></a>
-                              <a v-else href="javascript:void(0)"><Icon type="arrow-down-b" size="20" @click="spectrumTableCollapseChange(true)"></Icon></a>
+                              <a v-if="spectrumTableCollapse" href="javascript:void(0)"><Icon type="md-arrow-dropright" size="24" @click="spectrumTableCollapseChange(false)"></Icon></a>
+                              <a v-else href="javascript:void(0)"><Icon type="md-arrow-dropdown" size="24" @click="spectrumTableCollapseChange(true)"></Icon></a>
                           </span>
                        </p>
                        <div class="spectrum-container">
@@ -168,13 +168,13 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
-  import store from "@/store/store.js"
+  import NavBar from '@/components/Nav'
+  import store from "@/store.js"
   export default {
     name: 'archive',
     data(){
       return {
-          iframeURL:this.$store.state.baseURL + '/static/lorikeet/html/pride.html',
+          iframeURL:this.$store.state.baseURL + '/lorikeet/html/pride.html',
           proteinAccessionInputModel:'',
           peptideSequenceInputModel:'',
           proteinSequence:'',
@@ -306,7 +306,7 @@
                       return h('span',[
                           h('Icon',{
                               props:{
-                                  type: 'information-circled'
+                                  type: 'ios-information-circle'
                               },
                               style: {
                                   marginRight: '5px',
@@ -399,7 +399,7 @@
                       return h('span',[
                           h('Icon',{
                               props:{
-                                  type: 'information-circled'
+                                  type: 'ios-information-circle'
                               },
                               style: {
                                   marginRight: '5px',
@@ -645,7 +645,7 @@
                       return h('span',[
                           h('Icon',{
                               props:{
-                                  type: 'information-circled'
+                                  type: 'ios-information-circle'
                               },
                               style: {
                                   marginRight: '5px',
@@ -737,7 +737,7 @@
                       return h('span',[
                           h('Icon',{
                               props:{
-                                  type: 'information-circled'
+                                  type: 'ios-information-circle'
                               },
                               style: {
                                   marginRight: '5px',
@@ -962,7 +962,7 @@
                       return h('span',[
                           h('Icon',{
                               props:{
-                                  type: 'information-circled'
+                                  type: 'ios-information-circle'
                               },
                               style: {
                                   marginRight: '5px',
@@ -1060,7 +1060,7 @@
                       return h('span',[
                           h('Icon',{
                               props:{
-                                  type: 'information-circled'
+                                  type: 'ios-information-circle'
                               },
                               style: {
                                   marginRight: '5px',
@@ -1105,7 +1105,7 @@
                                   }, [
                                       h('Icon', {
                                           props: {
-                                            type: 'ios-list-outline',
+                                            type: 'ios-list-box-outline',
                                             size: 20
                                           },
                                           style: {
