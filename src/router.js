@@ -11,7 +11,7 @@ const Peptidome = resolve => require(['@/views/peptidome/Peptidome'], resolve);
 const PeptideSearch = resolve => require(['@/views/peptidome/PeptideSearch'], resolve);
 const PeptideDownload = resolve => require(['@/views/peptidome/PeptideDownload'], resolve);
 const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary'], resolve);
-// const PeptideDetails = resolve => require(['@/components/peptidome/PeptideDetails'], resolve);
+const PeptideDetails = resolve => require(['@/views/peptidome/PeptideDetails'], resolve);
 // const PSM = resolve => require(['@/components/peptidome/PSM'], resolve);
 // const ClusterProjects = resolve => require(['@/components/peptidome/ClusterProjects'], resolve);
 // const Assay = resolve => require(['@/components/peptidome/Assay'], resolve);
@@ -101,11 +101,11 @@ export default new Router({
       name: 'spectrumlibrary',
       component: SpectrumLibrary
     },
-  //   {
-  //     path:'/peptidome/peptidedetails/:id',
-  //     name: 'peptidedetails',
-  //     component: PeptideDetails
-  //   },
+    {
+      path:'/peptidome/peptidedetails/:id',
+      name: 'peptidedetails',
+      component: PeptideDetails
+    },
   //   {
   //     path:'/psm/:id',
   //     name: 'psm',
