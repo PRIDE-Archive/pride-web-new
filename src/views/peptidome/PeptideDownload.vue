@@ -4,7 +4,7 @@
         <div class="jumbotron">
             <div class="container">
                 <p class="head">Cluster Results Files</p>
-                <p class="text">These cluster results files are derived from the <a>PRIDE Cluster results</a>. They classified the PRIDE Cluster results in different files that can be use by the community for different analyses and aims. For example the Unidentified clusters with at least 100 spectra can be use to look for new peptide identifications, variants, modifications that are difficult to identified with common search engine strategies; the Phospho clusters contains all reliable phosphorilated clusters. Other files can be found in the PRIDE Cluster <a>FTP</a>.</p>
+                <p class="text">These cluster results files are derived from the <a class="peptide-download-action">PRIDE Cluster results</a>. They classified the PRIDE Cluster results in different files that can be use by the community for different analyses and aims. For example the Unidentified clusters with at least 100 spectra can be use to look for new peptide identifications, variants, modifications that are difficult to identified with common search engine strategies; the Phospho clusters contains all reliable phosphorilated clusters. Other files can be found in the PRIDE Cluster <a class="peptide-download-action">FTP</a>.</p>
             </div>
         </div>
         <div class="album">
@@ -28,7 +28,7 @@
     </div>
 </template>
 <script>
-    import NavBar from '@/components/ebi/Nav'
+    import NavBar from '@/components/Nav'
     export default {
         data () {
             return {
@@ -135,6 +135,12 @@
         border-radius: 3px;
         color:white;
         border-bottom-style:none;
+    }
+    .peptide-download-action{
+        color:#444;
+    }
+    .peptide-download-action:hover{
+        color:#5bc0be;
     }
     @media (max-width: 700px) { 
       .item{ 
