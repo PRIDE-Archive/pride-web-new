@@ -185,8 +185,8 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
-  import store from "@/store/store.js"
+  import NavBar from '@/components/Nav'
+  import store from "@/store.js"
   var paramsFromLandingPage='';
   export default {
     name: 'archive',
@@ -202,8 +202,8 @@
           highlightKeyword:'',
           HighlightKeywordSensitive:false,
           facetsURL: this.$store.state.baseApiURL + '/facet/projects',
-          searchConfigURL: this.$store.state.baseURL + '/static/config/facets/config.json', 
-          projectItemsConfigURL: this.$store.state.baseURL + '/static/config/projectItems/config.json',
+          searchConfigURL: this.$store.state.baseURL + '/config/facets/config.json', 
+          projectItemsConfigURL: this.$store.state.baseURL + '/config/projectItems/config.json',
           queryArchiveProjectListApi: this.$store.state.baseApiURL + '/search/projects',
           autoCompleteApi: this.$store.state.baseApiURL + '/search/autocomplete?keyword=',
           containItemSearch:'',
@@ -588,6 +588,7 @@
           }
       },
       searchInputLoadingDropdownOpen(open){
+        console.log('open',open)
           if(open){
               window.addEventListener('mousedown', this.searchInputBlur, false);
               window.addEventListener('touchstart', this.searchInputBlur, false);
