@@ -114,8 +114,8 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
-  import store from "@/store/store.js"
+  import NavBar from '@/components/Nav'
+  import store from "@/store.js"
   var paramsFromLandingPage='';
   export default {
     name: 'peptidome',
@@ -131,8 +131,8 @@
           highlightKeyword:'',
           HighlightKeywordSensitive:false,
           facetsURL: this.$store.state.baseApiURL + '/facet/projects',
-          searchConfigURL: this.$store.state.baseURL + '/static/config/facets/config.json', 
-          projectItemsConfigURL: this.$store.state.baseURL + '/static/config/projectItems/config.json',
+          searchConfigURL: this.$store.state.baseURL + '/config/facets/config.json', 
+          projectItemsConfigURL: this.$store.state.baseURL + '/config/projectItems/config.json',
           queryClusterListApi: 'https://www.ebi.ac.uk:443/pride/ws/cluster/cluster/list',
 
           autoCompleteApi: this.$store.state.baseApiURL + '/search/autocomplete?keyword=',
@@ -269,7 +269,7 @@
           }
 
           if(query !== ''){
-             // console.log('query',query);
+              console.log('query',query);
               this.searchInputLoading = false;
               this.$http
                   .get(this.autoCompleteApi + query)
@@ -347,57 +347,7 @@
           }
           if(!pageSizeFound)
             query.pageSize = this.pageSize;
-
-          /*
-          this.$http
-            .get(this.queryClusterListApi,{params: query})
-            .then(function(res){
-              this.total = res.body.page.totalElements;
-                this.loading = false;
-                if(res.body._embedded && res.body._embedded.compactprojects){
-                    this.setHighlightKeywords();
-                    let projectsList = res.body._embedded.compactprojects;
-                      for(let i=0; i<projectsList.length; i++){
-                          let item = {
-                              accession: projectsList[i].accession,
-                              title: projectsList[i].title,
-                              species: projectsList[i].organisms,
-                              projectDescription: projectsList[i].projectDescription.replace(/\s*$/g,"").slice(0,200) + '...',
-                              publicationDate: projectsList[i].publicationDate,
-                              projectTags: projectsList[i].projectTags,
-                              submissionType: projectsList[i].submissionType,
-                              hightlightItemArray:[],
-                          }
-                          //console.log('projectsList[i].highlights',projectsList[i].highlights);
-                          for(let j in projectsList[i].highlights){
-                              let content='';
-                              for(let k=0; k<projectsList[i].highlights[j].length;k++){
-                                //let temp = projectsList[i].highlights[j].k;
-                                //console.log(projectsList[i].highlights[j][k]);
-                                content += (projectsList[i].highlights[j][k]+'').replace(/<(\w+|\/\w+)>/g,'')+',';
-                              }
-                              let hightlightItem={
-                                  name:this.projectItemsConfigRes[j],
-                                  content:content.replace(/,$/gi,'')
-                              }
-                              item.hightlightItemArray.push(hightlightItem);
-                          }
-                          this.projectItemsSpecies = this.projectItemsConfigRes['organisms'];
-                          this.projectItemsProjectDescription = this.projectItemsConfigRes['projectDescription'];
-                          this.projectItemsPublicationDate = this.projectItemsConfigRes['publicationDate'];
-                          this.publicaitionList.push(item);
-                           
-                      }
-                }
-                else{
-                  this.$Message.error({content:'No results', duration:1});
-                }
-                
-            },function(err){
-
-            });
-          */
-          console.log('search query',query);
+          //console.log('search query',query);
           //let q=query.keyword?'q='+query.keyword : '';
           let newquery = '';
           for(let i in query){
@@ -408,15 +358,15 @@
               
           }
           var reg=/&$/gi; 
-          console.log('before',newquery);
+          //console.log('before',newquery);
           newquery = newquery.replace(reg,'');
-          console.log('after',newquery);
+          //console.log('after',newquery);
           this.$http
             .get(this.queryClusterListApi+'?'+newquery)
             .then(function(clusterRes){
                 this.loading=false;
                 this.total = clusterRes.body.totalResults;
-                console.log('clusterRes.body',clusterRes.body);
+                //console.log('clusterRes.body',clusterRes.body);
                 //console.log('this.facetsMap',this.facetsMap);
                 for(let i=0; i < clusterRes.body.results.length; i++){
                   var item = {
@@ -573,6 +523,7 @@
           }
       },
       searchInputLoadingDropdownOpen(open){
+          console.log('open',open)
           if(open){
               window.addEventListener('mousedown', this.searchInputBlur, false);
               window.addEventListener('touchstart', this.searchInputBlur, false);
@@ -688,6 +639,7 @@
       },
       submitSearch(){
         let temp = this.$refs.searchRef.$el.querySelector('.ivu-select-selection .ivu-select-input').value;
+        console.log('temp',temp);
         if(temp && this.tagArray.length == 0){
           this.tadAdd(temp);
           this.$refs.searchRef.setQuery(null);
@@ -697,6 +649,8 @@
           this.hightlightMode = true;
         else
           this.hightlightMode = false;
+
+        console.log('peptidome search', this.query)
 
         this.$router.push({name: 'peptidesearch', query: this.query});
         //this.$Message.success({content:'new result', duration:1});
@@ -779,9 +733,7 @@
               }
           });
 
-          this.$refs.searchRef.$el.querySelector('.ivu-select-selection .ivu-select-input').addEventListener('keyup',(e)=>{
-           // console.log('123');
-           
+          this.$refs.searchRef.$el.querySelector('.ivu-select-selection .ivu-select-input').addEventListener('keyup',(e)=>{  
               if(e.keyCode == 13 || e.keyCode == 188){
                   e.preventDefault();
                   e.stopPropagation();
@@ -844,6 +796,7 @@
           for(let i=0; i<this.tagArray.length; i++){
 
           }
+          //console.log('this.keyword',this.keyword)
           if(this.keyword)
             normalQuery.keyword = this.keyword;
           if(this.filter)
@@ -1241,6 +1194,6 @@
       display: none;
     }
     .search-input-wrapper.peptidome .ivu-select-dropdown{
-      display: none;
+      /*display: none;*/
     }
 </style>
