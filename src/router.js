@@ -3,12 +3,12 @@ import Router from 'vue-router'
 //import Index from '@/components/landingpage/Index'
 
 const LandingPage = resolve => require(['@/views/landingpage/LandingPage'], resolve);
-// const Archive = resolve => require(['@/components/archive/Archive'], resolve);
+const Archive = resolve => require(['@/views/archive/Archive'], resolve);
 // const Dataset = resolve => require(['@/components/archive/Dataset'], resolve);
 const NotFound = resolve => require(['@/views/NotFound'], resolve);
 const MarkdownPage = resolve => require(['@/views/documentation/MarkdownPage'], resolve);
 const Peptidome = resolve => require(['@/views/peptidome/Peptidome'], resolve);
-// const PeptideSearch = resolve => require(['@/components/peptidome/PeptideSearch'], resolve);
+const PeptideSearch = resolve => require(['@/views/peptidome/PeptideSearch'], resolve);
 // const PeptideDownload = resolve => require(['@/components/peptidome/PeptideDownload'], resolve);
 const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary'], resolve);
 // const PeptideDetails = resolve => require(['@/components/peptidome/PeptideDetails'], resolve);
@@ -56,11 +56,11 @@ export default new Router({
         ]
       */
     },
-  //   {
-  //     path: '/archive',
-  //     name: 'archive',
-  //     component: Archive
-  //   },
+    {
+      path: '/archive',
+      name: 'archive',
+      component: Archive
+    },
   //   {
   //     path:'/archive/projects/:id',
   //     name: 'dataset',
@@ -81,11 +81,11 @@ export default new Router({
       name: 'peptidome',
       component: Peptidome
     },
-  //   {
-  //     path: '/peptidome/peptidesearch',
-  //     name: 'peptidesearch',
-  //     component: PeptideSearch
-  //   },
+    {
+      path: '/peptidome/peptidesearch',
+      name: 'peptidesearch',
+      component: PeptideSearch
+    },
     // {
     //   path: '/archive/spectra',
     //   name: 'spectra',
