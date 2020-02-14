@@ -103,9 +103,9 @@
                     <span>List of Datasets ({{total}})</span>
                     <span v-if="publicaitionList.length>0" class="sort-wrapper">
                         <span>Order by: </span>
-                        <div class="sortOption">
-                            <a><Icon v-if="order=='DESC'" type="arrow-down-b" size="18" @click="orderChange('ASC')"/></a>
-                            <a><Icon v-if="order=='ASC'" type="arrow-up-b" size="18" @click="orderChange('DESC')"/></a>
+                        <div class="sortOption"> 
+                            <a class="order-action"><Icon v-if="order=='DESC'" type="md-arrow-dropdown" size="22" @click="orderChange('ASC')"/></a>
+                            <a class="order-action"><Icon v-if="order=='ASC'" type="md-arrow-dropup" size="22" @click="orderChange('DESC')"/></a>
                         </div>
                         <span style="margin-left: 10px">Sort by: </span>
                         <div class="sortOption">
@@ -124,9 +124,9 @@
                   <Card v-if="publicaitionList.length>0" v-for="publicationItem in publicaitionList" class="resource-item" v-bind:key = "publicationItem.accession">
                       <router-link class="resource-id" :to="{name:'dataset',  params: { id: publicationItem.accession}}"><text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{publicationItem.accession}}</text-highlight></router-link><span v-if="publicationItem.submissionType == 'COMPLETE'"><Icon type="checkmark-round"></Icon></span> 
                       <p class="resource-title"><text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{publicationItem.title}}</text-highlight></p> 
-                      <p><span class="project-info">{{projectItemsSpecies}}: </span> <span v-for="item in publicationItem.species"><text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{item}}</text-highlight>;</span><a style="margin-left: 5px"v-if= "publicationItem.organisms.length>3" @click="gotoDetails(publicationItem.accession)">(More)</a></p>
+                      <p><span class="project-info">{{projectItemsSpecies}}: </span> <span v-for="item in publicationItem.species"><text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{item}}</text-highlight>;</span><a class="more-action" style="margin-left: 5px"v-if= "publicationItem.organisms.length>3" @click="gotoDetails(publicationItem.accession)">(More)</a></p>
                       <span><span class="project-info">{{projectItemsProjectDescription}}: </span><text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{publicationItem.projectDescription}}</text-highlight>
-                        <a @click="gotoDetails(publicationItem.accession)">(More)</a>
+                        <a class="more-action" @click="gotoDetails(publicationItem.accession)">(More)</a>
                         <!--<read-more class="readMore" more-str="(More)" :text="publicationItem.projectDescription" link="#" less-str="Less" :max-chars="200"></read-more>-->
                       </span>
                       <p><span class="project-info">{{projectItemsSubmitters}}: </span><text-highlight :queries="highlightKeyword" :caseSensitive="HighlightKeywordSensitive">{{publicationItem.submitters}}</text-highlight></p>
@@ -156,7 +156,7 @@
                               <DropdownItem>{{datesetItem}}</DropdownItem>
                           </DropdownMenu> -->
                       </Dropdown>
-                      <Collapse v-if="hightlightMode">
+                      <Collapse v-if="hightlightMode" simple>
                           <Panel>
                               <span>Matched Items</span>
                               <p class="matched-items" v-for="highlightItem in publicationItem.hightlightItemArray" slot="content">
@@ -1126,6 +1126,14 @@
       display:flex;
       align-items: center;
     }
+    .sortOption .order-action{
+      border-bottom:none;
+      color:#444;
+    }
+    .sortOption .order-action:hover{
+      color:#5bc0be;
+
+    }
 </style>
 
 <style>
@@ -1215,7 +1223,10 @@
 
     }
     .sortOption .ivu-select-dropdown{
-      width:120px!important;
+      width:140px!important;
+    }
+    .sortOption.page .ivu-select-dropdown{
+      width:90px!important;
     }
     .sortOption .ivu-select-dropdown .ivu-select-item{
       font-weight: normal !important;
@@ -1234,9 +1245,18 @@
       margin-top: 10px;
       margin-bottom: 5px;
     }
+    .resource-item .ivu-collapse > .ivu-collapse-item > .ivu-collapse-header > i{
+      margin-right: 0px !important;
+    }
     .resource-item .ivu-collapse{
       border:none;
       background: none;
+    }
+    .resource-item .more-action{
+      color: #444;
+    }
+    .resource-item .more-action:hover{
+      color:#5bc0be;
     }
     .resource-item .ivu-collapse-content > .ivu-collapse-content-box{
       padding-top: 0;
@@ -1291,5 +1311,12 @@
     }
     .sortOption.page .ivu-page-options{
       margin-left: 5px;
+    }
+    .archive-container .ivu-select-single .ivu-select-selection .ivu-select-selected-value{
+      font-size: 12px;
+    }
+    .archive-container .ivu-select-single .ivu-select-selection .ivu-select-input{
+      font-size: 12px;
+      top: 0;
     }
 </style>
