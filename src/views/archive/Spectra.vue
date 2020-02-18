@@ -220,6 +220,12 @@
                   render: (h, params) => {
                       return h('div', [
                           h('a', {
+                              style:{
+                                color:'#444'
+                              },
+                              class:{
+                                projectAction:true
+                              },
                               on: {
                                   click: () => {
                                       this.$router.push({name:'dataset',params:{id:params.row.accession}});
@@ -542,33 +548,46 @@
                       }
                       else
                         return h('span',{},'No Options')
-                  }
+                  },
+                  className:'psmPTMs' //for css right border settings
               },
               {
-                  title: 'PTMs',
+                  title: '',
                   key: 'ptms',
-                  width:0.1,
+                  width:1,
+                  render:(h,params)=>{
+                    return h('div')
+                  },
                   className:'psmPTMs'
                   // ellipsis:true
               },
               {
-                  title: 'Peaks',
+                  title: '',
                   key: 'peaks',
-                  width:0.1,
+                  width:1,
+                  render:(h,params)=>{
+                    return h('div')
+                  },
                   className:'psmPTMs'
                   // ellipsis:true
               },
               {
-                  title: 'VariableMods',
+                  title: '',
                   key: 'variableMods',
-                  width:0.1,
+                  width:1,
+                  render:(h,params)=>{
+                    return h('div')
+                  },
                   className:'psmPTMs'
                   // ellipsis:true
               },
               {
-                  title: 'Usi',
+                  title: '',
                   key: 'usi',
-                  width:0.1,
+                  width:1,
+                  render:(h,params)=>{
+                    return h('div')
+                  },
                   className:'psmPTMs'
                   // ellipsis:true
               },  
@@ -1397,7 +1416,11 @@
       display: none;
   }
   .psm-table .psmPTMs{
-      display: none;
+      /*display: none;*/
+      border-right: none
+  }
+  .psm-table .projectAction:hover{
+    color:#5bc0be !important;
   }
   .sort-dropdown .ivu-select-dropdown{
       border-radius:0;
