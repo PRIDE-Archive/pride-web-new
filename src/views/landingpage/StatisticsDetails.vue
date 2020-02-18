@@ -113,13 +113,13 @@
     </div>
 </template>
 <script>
-    import TreetPride from '@/assets/chart/Tree.vue'
-    import SunburstPride from '@/assets/chart/Sunburst.vue'
-    import SankeyPride from '@/assets/chart/Sankey.vue'
-    import LinePride from '@/assets/chart/Line.vue'
-    import PiePride from '@/assets/chart/Pie.vue'
-    import MapPride from '@/assets/chart/Map.vue'
-    import BarHorizontalPride from '@/assets/chart/BarHorizontal.vue'
+    import TreetPride from '@/components/chart/Tree.vue'
+    import SunburstPride from '@/components/chart/Sunburst.vue'
+    import SankeyPride from '@/components/chart/Sankey.vue'
+    import LinePride from '@/components/chart/Line.vue'
+    import PiePride from '@/components/chart/Pie.vue'
+    import MapPride from '@/components/chart/Map.vue'
+    import BarHorizontalPride from '@/components/chart/BarHorizontal.vue'
     import NavBar from '@/components/Nav'
     import store from "@/store.js"
     export default {
@@ -311,7 +311,12 @@
         white-space: normal
     }
     .submission-options{
+      color:#444;
       border-bottom-style:none !important;
+      margin-left: 5px;
+    }
+    .submission-options:hover{
+      color:#5bc0be;
     }
     .code-row-bg{
       margin-bottom: 50px;
