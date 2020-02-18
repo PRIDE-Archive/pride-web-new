@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
+  import NavBar from '@/components/Nav'
   export default {
     name: 'archive',
     data(){

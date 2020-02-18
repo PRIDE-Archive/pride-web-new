@@ -13,7 +13,7 @@ const PeptideDownload = resolve => require(['@/views/peptidome/PeptideDownload']
 const SpectrumLibrary = resolve => require(['@/views/peptidome/SpectrumLibrary'], resolve);
 const PeptideDetails = resolve => require(['@/views/peptidome/PeptideDetails'], resolve);
 const PSM = resolve => require(['@/views/peptidome/PSM'], resolve);
-// const ClusterProjects = resolve => require(['@/components/peptidome/ClusterProjects'], resolve);
+//const ClusterProjects = resolve => require(['@/views/peptidome/ClusterProjects'], resolve);
 const StatisticsDetails = resolve => require(['@/views/landingpage/StatisticsDetails'], resolve);
 const Profile = resolve => require(['@/views/ebi/Profile'], resolve);
 const Molecules = resolve => require(['@/views/archive/Molecules'], resolve);
@@ -110,11 +110,11 @@ export default new Router({
       name: 'psm',
       component: PSM
     },
-  //   {
-  //     path:'/clusterprojects/:id',
-  //     name: 'clusterprojects',
-  //     component: ClusterProjects
-  //   },
+    // {
+    //   path:'/clusterprojects/:id',
+    //   name: 'clusterprojects',
+    //   component: ClusterProjects
+    // },
     {
       path:'/statisticsdetails',
       name: 'statisticsdetails',
