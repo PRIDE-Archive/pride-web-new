@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import NavBar from '@/components/ebi/Nav'
+  import NavBar from '@/components/Nav'
   export default {
     name: 'archive',
     data(){
@@ -94,15 +94,15 @@
                                  h('Tooltip',//first item
                                     {
                                         props: {
-                                            content: 'Show assay details',
+                                            content: 'Click project to check',
                                         },
                                     },//second item
                                     [
-                                       h('a', {
+                                       h('span', {
                                             on: {
-                                                click: () => {
-                                                    this.$router.push({name:'assay',params:{id:params.row.assay}});
-                                                }
+                                                // click: () => {
+                                                //     this.$router.push({name:'assay',params:{id:params.row.assay}});
+                                                // }
                                             }
                                         }, params.row.assay),
                                     
