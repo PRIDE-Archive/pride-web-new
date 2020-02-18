@@ -18,7 +18,7 @@ const StatisticsDetails = resolve => require(['@/views/landingpage/StatisticsDet
 const Profile = resolve => require(['@/views/ebi/Profile'], resolve);
 const Molecules = resolve => require(['@/views/archive/Molecules'], resolve);
 const PrivateDataset = resolve => require(['@/views/archive/PrivateDataset'], resolve);
-// const Spectra = resolve => require(['@/views/archive/Spectra'], resolve);
+const Spectra = resolve => require(['@/views/archive/Spectra'], resolve);
 const Register = resolve => require(['@/views/ebi/Register'], resolve);
 const Publish = resolve => require(['@/views/archive/Publish'], resolve);
 const EditProfile = resolve => require(['@/views/ebi/EditProfile'], resolve);
@@ -85,11 +85,11 @@ export default new Router({
       name: 'peptidesearch',
       component: PeptideSearch
     },
-    // {
-    //   path: '/archive/spectra',
-    //   name: 'spectra',
-    //   component: Spectra
-    // },
+    {
+      path: '/archive/spectra',
+      name: 'spectra',
+      component: Spectra
+    },
     {
       path: '/peptidome/peptidedownload',
       name: 'peptidedownload',
