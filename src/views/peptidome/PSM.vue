@@ -47,7 +47,7 @@
                         align:'center',
                         render: (h, params) => {
                             return h('div', [
-                              h('a', {
+                              h('span', {
                                 on: {
                                     click: () => {
                                         
